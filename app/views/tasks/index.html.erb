@@ -1,0 +1,12 @@
+<h1 style="display: inline-block; margin-right: 20px">My Tasks</h1><%= link_to "+ Add new task", tasks_new_path %>
+<div class="container">
+    <% @tasks.each do |task| %>
+      <h2 style="display: inline-block; margin-right: 20px;"><%= link_to task.title, task_path(task) %></h2>
+      <p><%= task.details %></p>
+      <p><%= task.completed %></p>
+      <hr>
+    <% end %>
+
+</div>
+
+
